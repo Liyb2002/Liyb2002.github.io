@@ -1,369 +1,259 @@
 <!DOCTYPE html>
+<!-- saved from url=(0024)https://xxh43.github.io/ -->
 <html lang="en">
 <head>
-    <title>Yuanbo Li</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link rel="shortcut icon" href="static/img/fav.png">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    <!--[if lt IE 9]>
-      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+	<title>Yuanbo Li</title>
 
-    <style type="text/css">
-body{margin:0;padding:0;}
-a{color:#4e613e}
-a:hover{color:#566c7f}
-#background{position:fixed;top:0;overflow:hidden;height:0}
-#wave-canvas{display:block;position:relative;top:0;left:5%;width:55%;min-width:850px;height:150px;border:0}
-/*#main{z-index:2;margin:0 auto;position:absolute;padding-top:5%;width:100%;min-width:240px;text-align:center;background-color:rgb(254,250,246)}*/
-#main{margin:0 auto;padding:45px 30px 15px;width:100%;min-width:240px;text-align:center;background-color:rgb(250,255,254)}
-
-.main-content{padding:0;text-align:center;cursor:default;text-align:center;}
-/*#main-content{background:rgba(238,238,238,0.95);padding:0;text-align:center;cursor:default;text-align:center;}*/
-/*.main-content{margin-left:6.5104167%;width:86.9791667%;}*/
-@media (min-width: 768px) {
-    .main-content{width:66%;min-width:668px;margin:auto;}
-}
-@media (min-width: 1200px) {
-    .main-content{width:66%;max-width:900px;margin:auto;}
-}
-/*.main-content {
-    width:86.9791667%;
-    margin: 0 auto;
-}
-@media (min-width: 768px) {
-    .main-content{width:66%;min-width:668px;}
-}
-@media (min-width: 1200px) {
-    .main-content{width:66%;max-width:900px;}
-}*/
-/* Avatar, Name, etc. */
-#main-content-container{margin:0 auto;padding:15px 0 0;max-width:1080px;}
-@media (min-width: 768px) {
-    #main-content-container{padding:15px 0;}
-}
-#main-content-container .col-avatar{text-align:center}
-@media (min-width: 768px) {
-    #main-content-container .col-avatar{text-align:center}
-}
-#main-content-container .col-avatar .avatar{z-index:100;width:150px;height:150px;margin-top:0px;border-radius:100%;box-shadow:0 0 0 0.3em #eee;opacity:1;}
-
-#main-content-container .col-info{height:100%;align-items:center;}
-#main-info-container{padding-top:15px}
-#main-info-container .col-name{text-align:center;margin-top:30px}
-@media (min-width: 768px) {
-    #main-info-container .col-name{text-align:left;margin-top:0;}
-}
-#main-info-container .col-name .text{text-align:left}
-#main-info-container .col-name .name{margin:0;color:#566c7f;font-size:1.85em;font-family:"Source Sans Pro",Helvetica,sans-serif}
-#main-info-container .col-name .email{color:#666; font-size:14px}
-#main-info-container .col-link{text-align:center;margin:-5px 0 -25px;}
-#main-info-container .col-link ul {margin:0px auto auto;padding:0;list-style:none;text-align:center}
-#main-info-container .col-link li {display:inline-block;margin:auto;padding:0 10px;color:#ccc;line-height:10px}
-#main-info-container .col-link li a{width:45px;height:45px;color:#ccc;padding:0;font-size:45px;line-height:45px}
-#main-info-container .col-link li a:focus,
-#main-info-container .col-link li a:hover{text-decoration:none;cursor:hand}
-#main-info-container .col-link li a.border{border:1px solid #ccc;border-radius:100%;}
-#main-info-container .col-link li a.padding{padding:0px 0px;font-size:22px}
-
-/* Other */
-.main-more-container{width:100%;padding:0 30px}
-
-.main-bio-container{margin:auto;padding: 0 0em;max-width:1080px;text-align:left;padding-top:30px;max-width:1080px;font-size:1rem;line-height:1.4}
-.main-bio-container .subtitle{margin-top:0px;color:#566c7f}
-
-.main-other-container{margin:auto;padding: 0 0em;max-width:1080px;text-align:left;padding-top:30px;max-width:1080px;font-size:1rem;line-height:1.4}
-.main-other-container .subtitle{margin-top:0px;color:#566c7f}
-
-#main-pub-container{margin:auto;padding: 0 0em;max-width:1080px;text-align:left;padding-top:30px;max-width:1080px}
-#main-pub-container .subtitle{color:#566c7f;}
-
-#main-pub-container .subtitle-aux {font-size:1rem}
-#main-pub-container .subtitle-aux .note{margin-left:1em;color:#999999;text-decoration:none;font-size:14px}
-
-
-#footer{padding:1.5em 0 1.5em;min-width:240px;background:#fff;font-size:14px;line-height:12px;text-align:left}
-#footer .container{max-width:540px;padding:0 45px}
-#footer .row{align-items:center}
-#footer .stat{width:90px;overflow:hidden;margin:0 auto;padding:0 15px;}
-#footer .copyright{flex-grow:1;margin:5px auto 5px;text-align:left;display:block;font-size:14px;line-height:1.4}
-#footer a{color:#666666}
-#footer a:hover{color:#333333}
-
-.bold{font-weight:600}
-.highlight{color:#BB2222;font-weight:600}
-.highlight:hover{color:#BB2222;font-weight:600}
-.hide{display:none}
-    </style>
+	<link href="./yuanboli_files/main.css" rel="stylesheet">
+	<link href="./yuanboli_files/style.css" rel="stylesheet">
 </head>
 
 <body>
 
-<!--img src="static/img/hal-gatewood.jpg" id="background" class="" /-->
+	<div id="mainnav" class="navbar navbar-inverse navbar-static-top" role="navigation">
+		<div class="container">
+			<div class="navbar-brand">
+				<a href="https://liyb2002.github.io//">Yuanbo Li</a>
+			</div>
+		</div>
+	</div>
 
-<div id="main">
-    <!--canvas id="wave-canvas"></canvas-->
-    <div class="main-content">
-        <div id="main-content-container" class="container">
-            <div class="row">
-                <div class="col-sm-12 col-md-3 col-avatar">
-                    <img src="static/img/avatar.jpeg" class="avatar" />
-                </div>
-                <div class="col-sm-12 col-md-9">
-                    <div id="main-info-container">
-                            <div class="col-name">
-                                    <h1 class="name"><span>Yuanbo Li</span></h1>
-                                    <p class="email">Email: yuanbo_li [at] brown [dot] edu / <a href="https://www.linkedin.com/in/yuanbo-li-51245a153//">LinkedIn</a> / <a href="data/yuanbo_cv.pdf">CV</a> / <a href="https://github.com/Liyb2002">Github</a></p>
-                                    <p class="text">I am a CS Ph.D student at <a href="https://cs.brown.edu/">Brown University</a>. Before that, I graduated from <a href="https://www.columbia.edu//">Columbia University</a> with B.A in Mathematics. 
-                                        I am very fortunate to be advised by Prof. <a href="https://dritchie.github.io/", target="_blank">Daniel Ritchie</a> at  <a href="https://visual.cs.brown.edu/", target="_blank">Brown Visual Computing Lab</a> .</p>
-                                        <p class="text"> In my free time, I enjoy visiting museums and cycling. I have a strong interest in Renaissance arts and Dutch paintings.</p>
-                                    </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+	<div class="container" id="content">
 
-<div class="main-content">
-    <div class="main-more-container">
-        <div class="main-bio-container">
-            <h5 class="subtitle" style="margin-top:5px">Research Interests</h5>
-            <p>
-            My research interest lies in the intersection of <b>Computer Graphics</b> and <b>Artificial Intelligence </b>. My long-term goal is to develop computational tools 
-            that empower individuals to unleash their creativity and produce visually captivating and aesthetically pleasing content.
-            </p>
-        </div>
-    </div>
+		<div class="row">
+			<div class="col-md-3 sidebar">
 
-    <div class="main-more-container">
-        <div id="main-pub-container">
-            <h5 class="subtitle">Publications
-            </h5>
+				<div class="sidebaritem" id="headshot">
+					<img class="img img-responsive" src="./yuanboli_files/me.jpg" width="350">
+				</div>
 
-            <div id="main-pub-card-container" class="activated">
-                <div class="pub-card" data-topic="concept-learning" data-year="2022" data-selected="true">
-                    <div class="row">
-                        <div class="col-l col-xs-12 col-lg-3">
-                            <img src="data/projects/impossible_structures.png" width="180" height="160" align="middle" />
-                        </div>
-                        <div class="col-r col-xs-12 col-lg-9">
-                            <div class="pub-card-body">
-                                <h5 class="title">PossibleImpossibles: Exploratory Procedural Design of Impossible Structures</h5>
-                                <h6 class="authors">
-                                    <b>Yuanbo Li</b>,
-                                    <a href="https://cs.brown.edu/people/grad/tma10/">Tianyi Ma</a>,
-                                    <a href="https://zainebaljumayaat.cargo.site/">Zaineb Aljumayaat</a>,
-                                    <a href="https://dritchie.github.io/">Daniel Ritchie</a>,
-                                </h6>
+				<div class="sidebaritem" id="affiliations">
+					<div class="sidebarheader">Affiliations</div>
+					<div><a target="_blank" href="http://brown.edu/">Brown University</a></div>
+					<div><a target="_blank" href="http://cs.brown.edu/">Computer Science Department</a></div>
+					<div><a target="_blank" href="http://visual.cs.brown.edu/">Brown Visual Computing</a></div>
+				</div>
 
-                                <p class="info">
-                                    <i>Eurographics 2024</i> 
-                                </p>
-                                    <a href="data/PossibleImpossible_EG24.pdf">paper</a> / <a href="https://github.com/Liyb2002/Impossible_structures/tree/v2">code</a>
-                                    <!-- [<a href=>Paper</a> /
-                                    <a href=>Code</a>] -->
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+				<div class="sidebaritem" id="contactinfo">
+					<div class="sidebarheader">Contact Information</div>
+					<div>yuanbo_li at brown dot edu</div>
+					<a target="_blank" href="./yuanboli_files/Yuanbo_CV.pdf" style="text-decoration:none">
+						<img src="./yuanboli_files/cv.png" width="32px" style="vertical-align:middle">
+					</a>
+				</div>
 
+			</div>
 
+			<div class="col-md-9 maincontent">
 
-                <div id="main-pub-card-container" class="activated">
-                    <div class="pub-card" data-topic="concept-learning" data-year="2022" data-selected="true">
-                        <div class="row">
-                            <div class="col-l col-xs-12 col-lg-3">
-                                <img src="data/projects/vis2024.png" width="190" height="100" align="middle" />
-                            </div>
-                            <div class="col-r col-xs-12 col-lg-9">
-                                <div class="pub-card-body">
-                                    <h5 class="title">Active Appearance and Spatial Variation Can Improve Visibility in Area Labels for Augmented Reality
-                                    </h5>
-                                    <h6 class="authors">
-                                        <a href="https://hojung-ashley-kwon.pages.dev/#portfolio-page/">Hojung Kwon</a>,
-                                        <b>Yuanbo Li</b>, Xiaohan Ye, Praccho Muna-McQuay, Liuren Yin,
-                                        <a href="https://jamestompkin.com/">James Tompkin </a>,
-                                    </h6>
-    
-                                    <p class="info">
-                                        <i>Vis Short Papers 2024</i> 
-                                    </p>
-                                        <a href="https://ieeevis.org/year/2024/program/paper_v-short-1155.html">paper</a> 
-                                        <!-- [<a href=>Paper</a> /
-                                        <a href=>Code</a>] -->
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-    
+				<div class="mainitem" id="about">
+					<div class="hidden-md hidden-lg mainheader">About</div>
+					<p>
+						My name is Yuanbo Li, I'm a CS Ph.D student at <a target="_blank" href="http://brown.edu/">Brown University</a>. Before that, I graduated from <a target="_blank" href="https://www.columbia.edu/">Columbia University</a> with B.A in Mathematics. I am very fortunate to be advised by Prof. <a target="_blank" href="https://dritchie.github.io/">Daniel Ritchie</a> at Brown Visual Computing Lab.
+					</p>
+					<p>
+						I'm generally interested in creating tools to help designers quickly explore varies ideas at early stages. Currently, I'm mostly working on using VLMs with other foundation models to achieve this goal in a neural-symbolic way.
+					</p>
+				</div>
 
+				<div class="mainitem" id="publications">
+					<div class="mainheader">Publications</div>
 
-                
-            </div>
-        </div>
-    </div>
+					<div class="row pub">
 
+						<div class="col-lg-3 col-md-4 col-xs-4 pubimagesection">
+							<a target="_blank" href="yuanboli_files/NEW_PAPER.pdf">
+								<img class="pubimage img img-responsive" src="./yuanboli_files/CADrawer.png" width="205">
+							</a>
+						</div>
 
+						<div class="col-lg-9 col-md-8 col-xs-8 pubtextsection">
+							<div class="pubtitle">
+								<a target="_blank" href="yuanboli_files/NEW_PAPER.pdf">
+									CADrawer : Autoregressive CAD Generation from 3D Sketches
+								</a>
+							</div>
 
-                
-            </div>
+							<div class="pubauthors">
+								<a class="pubauthor" target="_blank"><strong>Yuanbo Li</strong>,</a>
+								<a class="pubauthor" href="http://graphics.unibas.it/www/gmanfredi/" target="_blank">Gilda Manfredi</a>,
+								<a class="pubauthor" href="https://www.linkedin.com/in/henro-kriel-2953b4211/" target="_blank">Henro Kriel,</a>,
+								Chengye Hao,
+								<a class="pubauthor" href="https://www-sop.inria.fr/members/Adrien.Bousseau/" target="_blank">Adrien Bousseau</a>,
+								<a class="pubauthor" href="https://dritchie.github.io/" target="_blank">Daniel Ritchie</a>
+							</div>
 
-        </div>
-    </div>
+							<div class="pubvenue">Eurographics 2026</div>
+						</div>
 
+					</div>
 
+					<div class="row pub">
 
-    <div id="footer">
-        <div class="container">
-            <div class="row">
-                <div class="stat">
-                    <!-- <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=6jUeCUZs-GXzzLncpP-TA3rxAPDJWWsl_u3QAlSEoOU"></script> -->
-                </div>
-                <div class="copyright">
-                    &copy; 2024 Aug, Yuanbo Li.<br />
-                    
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+						<div class="col-lg-3 col-md-4 col-xs-4 pubimagesection">
+							<a target="_blank" href="yuanboli_files/NEW_PAPER.pdf">
+								<img class="pubimage img img-responsive" src="./yuanboli_files/pllm.png" width="205">
+							</a>
+						</div>
 
-<!-- jQuery first, then Tether, then Bootstrap JS. -->
-<script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
-        integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
-        integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-<script type="text/javascript" src="static/js/jquery.color.min.js"></script>
-<script type="text/javascript" src="static/js/wave.js"></script>
-<script type="text/javascript">
+						<div class="col-lg-9 col-md-8 col-xs-8 pubtextsection">
+							<div class="pubtitle">
+								<a target="_blank" href="yuanboli_files/NEW_PAPER.pdf">
+									PLLM : Pseudo Label Methods for LLM CAD Generation
+								</a>
+							</div>
 
-$.fn.isInViewport = function() {
-    var elementTop = $(this).offset().top;
-    var elementBottom = elementTop + $(this).outerHeight();
-    var viewportTop = $(window).scrollTop();
-    var viewportBottom = viewportTop + $(window).height();
-    return elementBottom > viewportTop && elementTop < viewportBottom;
-};
+							<div class="pubauthors">
+								<a class="pubauthor" target="_blank"><strong>Yuanbo Li</strong>,</a>
+								<a class="pubauthor" href="https://scholar.google.com/citations?user=NNGmu5cAAAAJ&hl=en" target="_blank">Dule Shu</a>,
+								<a class="pubauthor" href="https://www.tri.global/about-us/dr-yan-ying-chen" target="_blank">Yanying Chen</a>,
+								<a class="pubauthor" href="https://www.tri.global/about-us/dr-matt-klenk" target="_blank">Matt Klenk</a>,
+								<a class="pubauthor" href="https://dritchie.github.io/" target="_blank">Daniel Ritchie</a>
+							</div>
 
-var allPublications = null;
+							<div class="pubvenue">(in submission)</div>
+						</div>
 
+					</div>
 
+					<div class="row pub">
 
+						<div class="col-lg-3 col-md-4 col-xs-4 pubimagesection">
+							<a target="_blank" href="yuanboli_files/NEW_PAPER.pdf">
+								<img class="pubimage img img-responsive" src="./yuanboli_files/NeuralScene.png" width="205">
+							</a>
+						</div>
 
-$(function() {
-    getRealSize = function(bgImg) {
-        var img = new Image();
-        img.src = bgImg.attr("src");
-        var width = img.width,
-            height = img.height;
-        return {
-            width: width,
-            height: height
-        }
-    };
+						<div class="col-lg-9 col-md-8 col-xs-8 pubtextsection">
+							<div class="pubtitle">
+								<a target="_blank" href="yuanboli_files/NEW_PAPER.pdf">
+									Learning Object Placement Programs with Iterative Self Training
+								</a>
+							</div>
 
-    getRealWindowSize = function() {
-        var winWidth = null,
-            winHeight = null;
-        if (window.innerWidth) winWidth = window.innerWidth;
-        else if ((document.body) && (document.body.clientWidth)) winWidth = document.body.clientWidth;
-        if (window.innerHeight) winHeight = window.innerHeight;
-        else if ((document.body) && (document.body.clientHeight)) winHeight = document.body.clientHeight;
-        if (document.documentElement && document.documentElement.clientHeight && document.documentElement.clientWidth) {
-            winHeight = document.documentElement.clientHeight;
-            winWidth = document.documentElement.clientWidth
-        }
-        return {
-            width: winWidth,
-            height: winHeight
-        }
-    };
+							<div class="pubauthors">
+								<a class="pubauthor" href="https://www.linkedin.com/in/anc2001/" target="_blank">Adrian Chang</a>,
+								<a class="pubauthor" href="https://kwang-ether.github.io/" target="_blank">Kai Wang</a>,
+								<a class="pubauthor" target="_blank"><strong>Yuanbo Li</strong>,</a>
+								<a class="pubauthor" href="https://msavva.github.io/" target="_blank">Manolis Savva</a>,
+								<a class="pubauthor" href="https://angelxuanchang.github.io/" target="_blank">Angel Chang</a>,
+								<a class="pubauthor" href="https://dritchie.github.io/" target="_blank">Daniel Ritchie</a>
+							</div>
 
-    fullBg = function() {
-        var bgImg = $("#background");
-        var mainContainer = $("#main");
-        var firstFire = null;
+							<div class="pubvenue">Arxiv 2025</div>
+						</div>
 
-        function resizeImg() {
-            var realSize = getRealSize(bgImg);
-            var imgWidth = realSize.width;
-            var imgHeight = realSize.height;
+					</div>
 
-            if (imgWidth == 0 || imgHeight == 0) {
-                setTimeout(function() {
-                    resizeImg();
-                }, 200);
-            }
+					<div class="row pub">
 
-            console.log(realSize);
-            var realWinSize = getRealWindowSize();
-            var winWidth = realWinSize.width;
-            var winHeight = realWinSize.height;
-            var widthRatio = winWidth / imgWidth;
-            var heightRatio = winHeight / imgHeight;
-            console.log(realWinSize);
-            if (widthRatio > heightRatio) {
-                bgImg.width(imgWidth * widthRatio + 'px').height(imgHeight * widthRatio + 'px').css({'top':
-                    -(imgHeight * widthRatio - winHeight) / 10 * 5 + 'px', 'left': '0'})
-            } else {
-                bgImg.width(imgWidth * heightRatio + 'px').height(imgHeight * heightRatio + 'px').css({'left':
-                    -(imgWidth * heightRatio - winWidth) / 10 * 3 + 'px', 'top': '0'})
-            }
-            // mainContainer.css({
-            //     width: winWidth,
-            //     height: winHeight
-            // });
-        }
+						<div class="col-lg-3 col-md-4 col-xs-4 pubimagesection">
+							<a target="_blank" href="yuanboli_files/PossibleImpossible_EG24.pdf">
+								<img class="pubimage img img-responsive" src="./yuanboli_files/impossible_structures.png" width="205">
+							</a>
+						</div>
 
-        resizeImg();
-        window.onresize = function() {
-            if (firstFire === null) {
-                firstFire = setTimeout(function() {
-                    resizeImg();
-                    firstFire = null
-                }, 100)
-            }
-        }
-    };
+						<div class="col-lg-9 col-md-8 col-xs-8 pubtextsection">
+							<div class="pubtitle">
+								<a target="_blank" href="yuanboli_files/PossibleImpossible_EG24.pdf">
+									PossibleImpossibles: Exploratory Procedural Design of Impossible Structures
+								</a>
+							</div>
 
-    targetColor = $("#main-content-container .name").css("color");
-    animatedLink = function(speed) {
-        $("#main-content-container .col-link li").hover(function() {
-            $(this).find('.icon').animate({
-                color: targetColor,
-                borderColor: targetColor
-            }, speed);
-            $(this).find('.caption').animate({
-                color: targetColor
-            })
-        }, function() {
-            $(this).find('.icon').animate({
-                borderColor: '#cccccc',
-                color: '#cccccc'
-            }, speed);
-            $(this).find('.caption').animate({
-                color: '#cccccc'
-            })
-        })
-    };
+							<div class="pubauthors">
+								<a class="pubauthor" target="_blank"><strong>Yuanbo Li</strong>,</a>
+								Tianyi Ma,
+								<a class="pubauthor" href="https://zainebaljumayaat.cargo.site/About" target="_blank">Zaineb Aljumayaat</a>,
+								<a class="pubauthor" href="https://dritchie.github.io/" target="_blank">Daniel Ritchie</a>
+							</div>
 
-    fullBg();
-    animatedLink(400);
+							<div class="pubvenue">Eurographics 2024</div>
+						</div>
 
+					</div>
 
-    // $("#publication-by-selected").click();
-    // $("#publication-by-date").click();
-    $("#main-pub-card-container").removeClass("hide");
-});
-</script>
+					<div class="row pub">
+
+						<div class="col-lg-3 col-md-4 col-xs-4 pubimagesection">
+							<a target="_blank" href="https://ieeevis.org/year/2024/program/paper_v-short-1155.html">
+								<img class="pubimage img img-responsive" src="./yuanboli_files/vis2024.png" width="205">
+							</a>
+						</div>
+
+						<div class="col-lg-9 col-md-8 col-xs-8 pubtextsection">
+							<div class="pubtitle">
+								<a target="_blank" href="https://ieeevis.org/year/2024/program/paper_v-short-1155.html">
+									Active Appearance and Spatial Variation Can Improve Visibility in Area Labels for Augmented Reality
+								</a>
+							</div>
+
+							<div class="pubauthors">
+								<a class="pubauthor" href="https://hojung-ashley-kwon.pages.dev/" target="_blank">Hojung Kwon</a>,
+								<a class="pubauthor" target="_blank"><strong>Yuanbo Li</strong>,</a>
+								Xiaohan Ye,
+								Praccho Muna-McQuay,
+								Liuren Yin,
+								<a class="pubauthor" href="https://jamestompkin.com/" target="_blank">James Tompkin</a>,
+							</div>
+
+							<div class="pubvenue">Vis Short Papers 2024</div>
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class="mainitem" id="projects">
+					<div class="mainheader">Marathorn Records</div>
+
+					<p>
+						I enjoy trainning for Marathorns in my free time.
+					</p>
+
+					<div class="row project">
+						<div class="col-lg-12 col-md-12 col-xs-12 projtextsection">
+							<div class="projintro">
+								<p>
+									PB Full: (3'51) — Oct 2024 — Cape Cod Marathorn
+								</p>
+								<p>
+									PB Half: (1'40) — Nov 2024 — Bosto Half Marathorn
+								</p>
+							
+								<p>
+								Others Runs:
+								</p>
+								<p>
+									Full: (4'34) — July 2025 — San Francisco Marathorn
+								</p>
+							
+								<p>
+									Half: (1'49) — June 2025 — San Jose Marathorn
+								</p>
+							
+								<p>
+									Half: (1'45) — May 2024 — Rhode Island Half Marathorn
+								</p>
+
+								<p>
+									Half: (2'06) — May 2023 — Providence Half Marathorn
+								</p>
+							
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+
 </body>
 </html>
