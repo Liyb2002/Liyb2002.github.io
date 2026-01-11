@@ -1,8 +1,14 @@
 body {
-	font-family: "Times New Roman", Times, serif;
+	font-family: "Inter", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
 	font-size: 16px;
 	background-color: #ffffff;
 	color: #222222;
+
+		/* Smoother text rendering */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+
 }
 
 a, a:hover {
@@ -16,10 +22,15 @@ a, a:hover {
 	background-color: #eef5ff;   /* light blue bar */
 	color: #3a7bd5;
 	border: none;
+
+	/* NEW */
+	padding-top: 12px;
+	padding-bottom: 12px;
+
 }
 
 .navbar-brand {
-	font-size: 3em;
+	font-size: 2.6em;
 	line-height: 0.6em;
 	font-variant: small-caps;
 }
@@ -41,7 +52,7 @@ a, a:hover {
 }
 
 .sidebarheader {
-	font-weight: bold;
+	font-weight: italic;
 	font-variant: small-caps;
 	font-size: 17px;
 	margin-bottom: 2px;
@@ -51,7 +62,7 @@ a, a:hover {
 /*---------------------------------------------------------------*/
 
 .resourcelink {
-	font-weight: bold;
+	font-weight: italic;
 }
 
 /*---------------------------------------------------------------*/
@@ -62,13 +73,14 @@ a, a:hover {
 }
 
 .mainheader {
-	font-weight: bold;
+	font-weight: italic;
 	font-variant: small-caps;
 	font-size: 25px;
 	margin-bottom: 6px;
-	color: #3a7bd5;
+	color: #4a86e8;
 	border-bottom: 2px solid #eef5ff;
-	padding-bottom: 4px;
+	padding-bottom: 6px;
+	border-radius: 2px;
 }
 
 /*---------------------------------------------------------------*/
@@ -79,7 +91,7 @@ a, a:hover {
 }
 
 .newsdate {
-	font-weight: bold;
+	font-weight: italic;
 }
 
 /*---------------------------------------------------------------*/
