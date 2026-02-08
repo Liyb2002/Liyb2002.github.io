@@ -30,9 +30,10 @@ a, a:hover {
 }
 
 .navbar-brand {
-	font-size: 2.6em;
+	font-size: 3em;
 	line-height: 0.6em;
 	font-variant: small-caps;
+    font-weight: 500;   /* ← add this */
 }
 
 .navbar-brand a {
@@ -100,6 +101,8 @@ a, a:hover {
 .pub {
 	padding-top: 7px;
 	padding-bottom: 7px;
+	margin-bottom: 25px;   /* ← add this */
+
 	color: #000000;
 }
 
